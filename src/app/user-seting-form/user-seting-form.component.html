@@ -1,13 +1,14 @@
 <div class="container">
   <h2>User Settings</h2>
 
-  <form #newForm="ngForm">
+  <form #newForm="ngForm" (ngSubmit)="onSubmit(newForm)">
     <div class="form-group">
       <label for="name">Name</label>
       <input id="name" name="name" class="form-control" [(ngModel)]="userSettings.name"
-          required #nameField="ngModel"/>
+          required #nameField="ngModel"
+          [class.field-error]="newForm.submitted && nameField.invalid"/>
     </div>
-    <div [hidden]="nameField.valid || nameField.untouched"
+    <div [hidden]="!newForm.submitted || nameField.valid"
           class="alert alert-danger">
           Enter a name
     </div>
