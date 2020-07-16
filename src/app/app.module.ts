@@ -8,7 +8,8 @@ import { UserSetingFormComponent } from './user-seting-form/user-seting-form.com
 import { DataService } from './data/data.service';
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TimepickerModule } from 'ngx-bootstrap/timepicker'
 
 @NgModule({
   imports: [
@@ -17,7 +18,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
     HttpClientModule,
     ButtonsModule.forRoot(),
     BsDatepickerModule.forRoot(),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    TimepickerModule.forRoot()
   ],
   declarations: [
     AppComponent,

@@ -20,6 +20,7 @@ export class UserSetingFormComponent implements OnInit {
   };
   
   startDate: Date;
+  startTime: Date;
   userSettings : UserSettings = { ...this.originalUserSettings };
   postError = false;
   postErrorMessage = '';
@@ -33,6 +34,7 @@ export class UserSetingFormComponent implements OnInit {
     this.subscriptionTypes = this.dataService.getSubscriptionTypes();
 
     this.startDate = new Date();
+    this.startTime = new Date();
   }
 
   onBlur(field : NgModel) {
